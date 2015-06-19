@@ -1,0 +1,22 @@
+<!-- Sidebar -->
+<div id="" ng-controller="NavbarCtrl">
+  <!--<ul class="sidebar-nav">-->
+  <img src="static/logo.png" class="logo"><br>
+
+  <div ng-repeat="item in menu" class="">
+
+    <!-- begin menu_item -->
+    <div class="menuButton" layout="column" ng-class="{active: isActive(item.link)}">
+      <md-button ng-href="{{item.link}}" class="md-raised md-primary">
+        <div style="font-size:18px;">{{item.title}}</div>
+        <div ng-repeat="description in item.description">
+          <span style="font-size:8px;">{{description}}</span>
+        </div>
+      </md-button>
+    </div><br/>
+    <!-- end menu_item -->
+
+  </div>
+  <!--</ul>-->
+</div>
+<!-- /#sidebar-wrapper -->

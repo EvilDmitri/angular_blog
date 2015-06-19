@@ -1,0 +1,37 @@
+<!--The main layout page-->
+<md-content  layout-fill layout-align="space-between space-between" class="page" ng-controller="MainCtrl">
+
+
+
+  <div layout="row" flex>
+
+    <!-- Main menu-->
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2 navb" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <!--<md-toolbar class="md-theme-indigo">-->
+      <!--<h1 class="md-toolbar-tools">Jukebox</h1>-->
+      <!--</md-toolbar>-->
+
+      <md-content class="md-padding">
+        <!--Menu-->
+        <div ng-include="'components/navbar/navbar.html'"></div>
+      </md-content>
+    </md-sidenav>
+    <!--/Main menu-->
+
+    <md-content class="md-padding" flex>
+
+      <!--<div id="playbar" layout="row" layout-align="space-around">-->
+        <!--<div ng-include="'components/playbar/playbar.html'" layout-fill></div>-->
+      <!--</div>-->
+      <div ui-view="content">
+
+        <!-- The main page content here-->
+      </div>
+
+    </md-content>
+
+  </div>
+
+
+
+</md-content>
